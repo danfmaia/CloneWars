@@ -20,6 +20,10 @@ public class Sniper extends Stormtrooper {
             System.out.println( "!" );
         }
     }
+    
+    public float accept( StormtrooperExaminer examiner ){
+    	return examiner.rate( this );
+    }
 
 // :: GETTERS & SETTERS ::
 
