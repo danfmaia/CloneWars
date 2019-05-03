@@ -1,10 +1,10 @@
-import stormtroopers.IStormtrooperExaminer;
+import stormtrooperExaminer.IStormtrooperExaminer;
+import stormtrooperExaminer.StormtrooperExaminer;
 import stormtroopers.Standard;
 import stormtroopers.Charger;
 import stormtroopers.Grenadier;
 import stormtroopers.Sniper;
 import stormtroopers.Stormtrooper;
-import stormtroopers.StormtrooperExaminer;
 import stormtroopers.StormtroopersRepo;
 
 public class CloneWarsGame {
@@ -46,6 +46,9 @@ public class CloneWarsGame {
         standard.changeAttribute( 1, +2 );
         examiner.rateAndPrint();
         standard.changeAttribute( 1, -2 );
+        standard.changeAttribute( 2, +2 );
+        examiner.rateAndPrint();
+        standard.changeAttribute( 2, -2 );
         standard.changeAttribute( 3, +2 );
         examiner.rateAndPrint();
         System.out.println();
@@ -57,6 +60,9 @@ public class CloneWarsGame {
         charger.changeAttribute( 1, +2 );
         examiner.rateAndPrint();
         charger.changeAttribute( 1, -2 );
+        charger.changeAttribute( 2, +2 );
+        examiner.rateAndPrint();
+        charger.changeAttribute( 2, -2 );
         charger.changeAttribute( 3, +2 );
         examiner.rateAndPrint();
         System.out.println();
@@ -67,6 +73,9 @@ public class CloneWarsGame {
         grenadier.changeAttribute( 1, +2 );
         examiner.rateAndPrint();
         grenadier.changeAttribute( 1, -2 );
+        grenadier.changeAttribute( 2, +2 );
+        examiner.rateAndPrint();
+        grenadier.changeAttribute( 2, -2 );
         grenadier.changeAttribute( 3, +2 );
         examiner.rateAndPrint();
         System.out.println();
@@ -77,7 +86,10 @@ public class CloneWarsGame {
         sniper.changeAttribute( 1, +2 );
         examiner.rateAndPrint();
         sniper.changeAttribute( 1, -2 );
+        sniper.changeAttribute( 2, +2 );
+        examiner.rateAndPrint();
+        sniper.changeAttribute( 2, -2 );
         sniper.changeAttribute( 3, +2 );
-        examiner.rateAndPrint();        
+        examiner.rateAndPrint();       
     }
 }

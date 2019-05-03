@@ -1,6 +1,9 @@
 package stormtroopers;
 
-public abstract class Stormtrooper implements Cloneable, Examineable {
+import stormtrooperExaminer.IStormtrooperExamineable;
+import stormtrooperExaminer.IStormtrooperExaminer;
+
+public abstract class Stormtrooper implements Cloneable, IStormtrooperExamineable {
 
     protected String id;
     protected int level;

@@ -1,4 +1,6 @@
-package stormtroopers;
+package stormtrooperExaminer;
+
+import stormtroopers.Stormtrooper;
 
 public class StormtrooperExaminer implements IStormtrooperExaminer {
 	
