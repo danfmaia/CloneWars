@@ -16,10 +16,6 @@ public class Standard extends Stormtrooper {
         System.out.println( getType() + " trooper is attacking with its " + weapon + "!" );
     }
     
-    public float accept( StormtrooperExaminer examiner ){
-    	return examiner.rate( this );
-    }
-
 // :: GETTERS & SETTERS ::
 
     @Override

@@ -1,3 +1,4 @@
+import stormtroopers.IStormtrooperExaminer;
 import stormtroopers.Standard;
 import stormtroopers.Charger;
 import stormtroopers.Grenadier;
@@ -10,8 +11,7 @@ public class CloneWarsGame {
 
     public static void main(String[] args) {
     	
-    	System.out.println( "Carregando repositório e instanciando um exemplar"
-    			+ " de cada subclasse...");
+    	System.out.println( ":::\n::: Loading repo and instantiating an unit for each subclass...\n:::" );
     	
         StormtroopersRepo.loadRepo();
         
@@ -35,34 +35,49 @@ public class CloneWarsGame {
         System.out.println( "\nEnemy: " + sniper_clone );
         sniper_clone.attack();
         
-        // INSTANCIANDO O EXAMINADOR E REALIZANDO EXAMES EM CADA EXEMPLAR DE
-        // STORMTROOPER INSTANCIADO...
+        System.out.println("\n:::\n::: Instantiating an examiner for each instantiated stormtrooper...\n:::" );
         
-        System.out.println("\nInstanciando um examinador e realizando um exame"
-        		+ " para cada stormtrooper instanciado...");
-        
-        StormtrooperExaminer examiner;
-        float rating;
+        IStormtrooperExaminer examiner = new StormtrooperExaminer();
         
         Standard standard = (Standard) standard_clone;
-        examiner = new StormtrooperExaminer();
-        rating = standard.accept( examiner );
-        examiner.printRate( standard , rating );
+        standard.printAttributes();
+        standard.accept( examiner );
+        examiner.rateAndPrint();
+        standard.changeAttribute( 1, +2 );
+        examiner.rateAndPrint();
+        standard.changeAttribute( 1, -2 );
+        standard.changeAttribute( 3, +2 );
+        examiner.rateAndPrint();
+        System.out.println();
         
         Charger charger = (Charger) charger_clone;
-        examiner = new StormtrooperExaminer();
-        rating = charger.accept( examiner );
-        examiner.printRate( charger , rating );
+        charger.printAttributes();
+        charger.accept( examiner );
+        examiner.rateAndPrint();
+        charger.changeAttribute( 1, +2 );
+        examiner.rateAndPrint();
+        charger.changeAttribute( 1, -2 );
+        charger.changeAttribute( 3, +2 );
+        examiner.rateAndPrint();
+        System.out.println();
         
         Grenadier grenadier = (Grenadier) grenadier_clone;
-        examiner = new StormtrooperExaminer();
-        rating = grenadier.accept( examiner );
-        examiner.printRate( grenadier , rating );
+        grenadier.accept( examiner );
+        examiner.rateAndPrint();
+        grenadier.changeAttribute( 1, +2 );
+        examiner.rateAndPrint();
+        grenadier.changeAttribute( 1, -2 );
+        grenadier.changeAttribute( 3, +2 );
+        examiner.rateAndPrint();
+        System.out.println();
         
         Sniper sniper = (Sniper) sniper_clone;
-        examiner = new StormtrooperExaminer();
-        rating = sniper.accept( examiner );
-        examiner.printRate( sniper , rating );
-        
+        sniper.accept( examiner );
+        examiner.rateAndPrint();
+        sniper.changeAttribute( 1, +2 );
+        examiner.rateAndPrint();
+        sniper.changeAttribute( 1, -2 );
+        sniper.changeAttribute( 3, +2 );
+        examiner.rateAndPrint();        
     }
 }

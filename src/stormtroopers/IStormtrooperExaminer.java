@@ -2,9 +2,9 @@ package stormtroopers;
 
 public interface IStormtrooperExaminer {
 	
-	public float rate( Standard trooper );
-	public float rate( Charger trooper );
-	public float rate( Grenadier trooper );
-	public float rate( Sniper trooper );
+	public void visit( Stormtrooper trooper );
+	
+	public float rate();
+	public void rateAndPrint();
 	
 }

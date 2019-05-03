@@ -21,10 +21,6 @@ public class Grenadier extends Stormtrooper {
         }
     }
     
-    public float accept( StormtrooperExaminer examiner ){
-    	return examiner.rate( this );
-    }
-
 // :: GETTERS & SETTERS ::
 
     @Override

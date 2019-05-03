@@ -21,10 +21,6 @@ public class Charger extends Stormtrooper {
         }
     }
     
-    public float accept( StormtrooperExaminer examiner ){
-    	return examiner.rate( this );
-    }
-
 // :: GETTERS & SETTERS ::
 
     @Override
