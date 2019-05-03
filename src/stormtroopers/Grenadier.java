@@ -1,5 +1,7 @@
 package stormtroopers;
 
+import stormtrooperExaminer.IStormtrooperExaminer;
+
 public class Grenadier extends Stormtrooper {
 
     public Grenadier( String id, int level, int strength, int agility, int intellect ) {
@@ -10,7 +12,12 @@ public class Grenadier extends Stormtrooper {
         this.intellect = intellect;
         this.weapon = "grenade launcher";
     }
-
+    
+    @Override
+    public float accept( IStormtrooperExaminer examiner ){
+    	return examiner.rate( this );
+    }
+    
     @Override
     public void attack() {
         System.out.print( getType() + " trooper is attacking with its " + weapon );
@@ -19,10 +26,6 @@ public class Grenadier extends Stormtrooper {
         } else {
             System.out.println( "!" );
         }
-    }
-    
-    public float accept( StormtrooperExaminer examiner ){
-    	return examiner.rate( this );
     }
 
 // :: GETTERS & SETTERS ::

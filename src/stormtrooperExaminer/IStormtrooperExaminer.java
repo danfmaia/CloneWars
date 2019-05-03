@@ -1,4 +1,9 @@
-package stormtroopers;
+package stormtrooperExaminer;
+
+import stormtroopers.Charger;
+import stormtroopers.Grenadier;
+import stormtroopers.Sniper;
+import stormtroopers.Standard;
 
 public interface IStormtrooperExaminer {
 	
